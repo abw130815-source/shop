@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AaroniaMC | Ingame-Shop</title>
+    <style>
+        /* Minecraft-Style Design */
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background: linear-space, #111;
+            border-bottom: 4px solid #55ff55;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #ffaa00;
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px #332200;
+        }
+
+        .subtitle {
+            color: #aaaaaa;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .notice {
+            background-color: #332200;
+            border: 2px dashed #ffaa00;
+            color: #ffaa00;
+            display: inline-block;
+            margin: 20px auto;
+            padding: 15px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .shop-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .rank-card {
+            background-color: #2d2d2d;
+            border: 3px solid #444444;
+            border-radius: 8px;
+            width: 280px;
+            padding: 25px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .rank-card:hover {
+            transform: translateY(-5px);
+            border-color: #55ff55;
+        }
+
+        /* VIP Highlight-Karte */
+        .rank-card.vip {
+            border-color: #ffaa00;
+            background-color: #332b1a;
+        }
+
+        .rank-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .rank-price {
+            font-size: 1.5rem;
+            color: #55ff55;
+            font-weight: bold;
+            background-color: #111111;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+        }
+
+        .rank-card.vip .rank-price {
+            color: #ffff55;
+        }
+
+        .features-list {
+            text-align: left;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            color: #dddddd;
+            line-height: 1.6;
+        }
+
+        .features-list li {
+            margin-bottom: 8px;
+        }
+
+        .buy-btn {
+            display: block;
+            background-color: #55ff55;
+            color: #000000;
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            border-bottom: 4px solid #00aa00;
+            transition: background 0.1s;
+        }
+
+        .buy-btn:active {
+            border-bottom-width: 0px;
+            margin-top: 4px;
+        }
+
+        .rank-card.vip .buy-btn {
+            background-color: #ffaa00;
+            border-bottom-color: #aa7700;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #111111;
+            color: #777777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>AARONIA NETWORK SHOP</h1>
+        <div class="subtitle">Nutze deine Ingame-Coins, um Ränge freizuschalten!</div>
+    </header>
+
+    <div class="notice">
+        ⚠️ HINWEIS: Dieser Shop nutzt zu 100% kostenlose Ingame-Währung! KEIN ECHTES GELD!
+    </div>
+
+    <div class="shop-container">
+
+        <!-- Rang 1: Spieler+ -->
+        <div class="rank-card">
+            <div class="rank-name" style="color: #55ffff;">Spieler+</div>
+            <div class="rank-price">500.000 Coins</div>
+            <ul class="features-list">
+                <li>Prefix <span style="color: #55ffff;">[Spieler+]</span> im Chat</li>
+                <li>Zugriff auf den Befehl <span style="color: #ffff55;">/feed</span></li>
+                <li>Erstelle bis zu <b>3 Homes</b></li>
+                <li>Exklusives Haustier im Hub</li>
+            </ul>
+            <div class="buy-btn" onclick="alert('Nutze den Befehl /shop direkt auf dem Minecraft-Server (aaroniamc.de), um diesen Rang mit deinen Ingame-Coins zu kaufen!')">Im Spiel kaufen</div>
+        </div>
+
+        <!-- Rang 2: VIP (Dein Haupt-Rang!) -->
+        <div class="rank-card vip">
+            <div class="rank-name" style="color: #ffaa00;">👑 VIP 👑</div>
+            <div class="rank-price">2.000.000 Coins</div>
+            <ul class="features-list">
+                <li>Prefix <span style="color: #ffaa00;">[VIP]</span> im Chat</li>
+                <li>Zugriff auf den Befehl <span style="color: #ffff55;">/fly</span> (Fliegen!)</li>
+                <li>Erstelle bis zu <b>10 Homes</b></li>
+                <li>Schreibe <b>bunt</b> im Chat</li>
+                <li>Betrete volle Server (Join-Power)</li>
+            </ul>
+            <div class="buy-btn" onclick="alert('Nutze den Befehl /shop direkt auf dem Minecraft-Server (aaroniamc.de), um den VIP-Rang für 2M Ingame-Coins zu kaufen!')">Im Spiel kaufen</div>
+        </div>
+
+        <!-- Rang 3: Premium -->
+        <div class="rank-card">
+            <div class="rank-name" style="color: #ff55ff;">Premium</div>
+            <div class="rank-price">5.000.000 Coins</div>
+            <ul class="features-list">
+                <li>Prefix <span style="color: #ff55ff;">[Premium]</span> im Chat</li>
+                <li>Zugriff auf <span style="color: #ffff55;">/heal</span> und <span style="color: #ffff55;">/fly</span></li>
+                <li><b>Unendliche</b> viele Homes</li>
+                <li>Eigene Partikeleffekte im Spiel</li>
+                <li>Zugriff auf den Premium-Kopf-Shop</li>
+            </ul>
+            <div class="buy-btn" onclick="alert('Nutze den Befehl /shop direkt auf dem Minecraft-Server (aaroniamc.de), um diesen Rang mit deinen Ingame-Coins zu kaufen!')">Im Spiel kaufen</div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 AaroniaMC &bull; Server-IP: aaroniamc.de &bull; Gehostet via GitHub Pages
+    </footer>
+
+</body>
+</html>
